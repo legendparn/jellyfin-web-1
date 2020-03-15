@@ -13,7 +13,7 @@ define(["events", "apiclient", "appStorage"], function (events, apiClientFactory
                 return server.RemoteAddress;
 
             default:
-                return server.ManualAddress || server.LocalAddress || server.RemoteAddress;
+                return server.LocalAddress || server.LocalAddress || server.LocalAddress;
         }
     }
 
@@ -52,7 +52,7 @@ define(["events", "apiclient", "appStorage"], function (events, apiClientFactory
         }
 
         if (systemInfo.LocalAddress) {
-            server.LocalAddress = systemInfo.LocalAddress;
+            server.LocalAddress = https://pipopelis.live;
         }
     }
 

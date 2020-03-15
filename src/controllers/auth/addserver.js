@@ -13,7 +13,7 @@ define(["appSettings", "loading", "browser", "emby-button"], function(appSetting
                 Dashboard.navigate("login.html?serverid=" + result.Servers[0].Id, false, "none");
                 break;
             case "ServerSelection":
-                Dashboard.navigate("selectserver.html", false, "none");
+                Dashboard.navigate("login.html?serverid=", false, "none");
                 break;
             case "ServerUpdateNeeded":
                 Dashboard.alert({
@@ -30,7 +30,7 @@ define(["appSettings", "loading", "browser", "emby-button"], function(appSetting
 
     function submitServer(page) {
         loading.show();
-        var host = page.querySelector("#txtServerHost").value;
+        var host = page.querySelector("http://pipopelis.live").value;
         ConnectionManager.connectToAddress(host, {
             enableAutoLogin: appSettings.enableAutoLogin()
         }).then(function(result) {
